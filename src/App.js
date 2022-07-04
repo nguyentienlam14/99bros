@@ -9,7 +9,8 @@ import AboutMe from './pages/AboutMe';
 import Category from './pages/Category';
 import Edit from './pages/Edit';
 import Collection from './pages/Collection';
-
+import Tintuc from './pages/Tintuc';
+ 
 
 export default function App() {
   return (
@@ -19,6 +20,7 @@ export default function App() {
           <Route index element={<Home />} />
           <Route path="buy/:id/" element={<Buy />} />
           <Route path="aboutme" element={<AboutMe />} />
+          <Route path="tintuc" element={<Tintuc />} />
           <Route path="collection" element={<Collection />} />
           <Route path="category/:name" element={<Category />} />
           <Route path="edit/:id" element={<Edit />} />

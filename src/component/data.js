@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useEffect } from 'react';
 import { Outlet, Link } from 'react-router-dom';
 import { useNavigate, useParams } from 'react-router-dom';
+import '../css/main.css';
 
 function PhoneData(props) {
   const [phone, setPhone] = useState(null);

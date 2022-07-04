@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useEffect } from 'react';
 import { Outlet, Link } from 'react-router-dom';
 import { useNavigate, useParams } from 'react-router-dom';
+import '../css/main.css';
 
 function UserPhoneData(props) {
   const [phone, setPhone] = useState(null);
@@ -30,25 +31,23 @@ function UserPhoneData(props) {
       if (count < 6) {
         count++;
         return (
-          <div className="col-md-4 col-sm-6 mt-4 text-center">
-            <div className="card" style={{ width: 300 }}>
-              <img
-                src={item.picture}
-                className="card-img-top"
-                width={300}
-              />
-              <div className="card-body">
-                <h5 className="card-title"> {item.name} </h5>
-                <p className="card-text"> ${item.price}</p>
+                <div class="col-md-4 mb-4">
+                  <div class="card overflow-hidden shadow"> <img class="card-img-top" src={item.image} height='300'/>
+                    <div class="card-body py-4 px-3">  
 
-                <Link to={'/buy/' + item.id}>
-                  <button className="btn btn-primary"> Buy </button>
-                </Link>
-              </div>
+                      <div class="d-flex align-items-center"><span class="fs-0 fw-medium"><h4 class="text-secondary fw-medium">Rome, Italty</h4><span class="fs-0 fw-medium" style={{color: 'black'}}>Địa chỉ: {item.DiaChi}</span></span></div>
 
-              
-            </div>
-          </div>
+                      <div class="d-flex align-items-center"><span class="fs-0 fw-medium">Mức Giá: {item.MucGia}</span></div>
+
+                      <div class="d-flex align-items-center"><span class="fs-0 fw-medium">Diện tích: {item.DienTich}</span>
+                      
+                      <i class="far fa-heart text-end" style={{paddingLeft: "12rem",}}></i>
+                      </div>
+
+                    </div>
+
+                  </div>
+                </div>
         );
       } else {
         return;

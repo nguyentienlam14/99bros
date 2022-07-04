@@ -10,7 +10,7 @@ const Home = () => {
   const [product, setProduct] = useState('');
   const [categories, setCategories] = useState(null);
   useEffect(() => {
-    let url = 'https://62b04a56e460b79df0423a2e.mockapi.io/aa/';
+    let url = 'https://62be5bb10bc9b1256155b7bd.mockapi.io/MainDatabase';
     fetch(url)
       .then((response) => response.json())
       .then((data) => {
@@ -51,76 +51,93 @@ const Home = () => {
   return (
     <>
       {/* <!-- ======= Hero Section ======= --> */}
-      <section id="hero" class="hero d-flex align-items-center section-bg">
+      <section style={{paddingTop: "7rem",}}>
+        <div class="bg-holder" style={{ 
+      backgroundImage: `url("https://images.pexels.com/photos/1571459/pexels-photo-1571459.jpeg?cs=srgb&dl=pexels-vecislavas-popa-1571459.jpg&fm=jpg")`}}>
+        </div>
+
         <div class="container">
-          <div class="row justify-content-between gy-5">
-            <div class="col-lg-5 order-2 order-lg-1 d-flex flex-column justify-content-center align-items-center align-items-lg-start text-center text-lg-start">
-              <h2 data-aos="fade-up">
-                The Best vietnam
-                <br />
-                Real estate website
-              </h2>
-              <p data-aos="fade-up" data-aos-delay="100">
-                Welcome to 99Bro website. This website provide infomation about
-                real estate by the fastest way.
-              </p>
-              <div class="d-flex" data-aos="fade-up" data-aos-delay="200">
-                <a href="#book-a-table" class="btn-book-a-table">
-                  Watch News
-                </a>
-                <a class="glightbox btn-watch-video d-flex align-items-center">
-                  <i class="bi bi-play-circle"></i>
-                  <span>Post News</span>
-                </a>
+          <div class="row align-items-center">
+            <div class="col-md-5 col-lg-6 order-0 order-md-1 text-end"></div>
+            <div class="col-md-7 col-lg-6 text-md-start text-center py-4">
+              <h1 class="hero-title">99Bros <br/> Real Estate Website </h1>
+              <p class="mb-4 fw-medium">This website provide infomation about real estate.<br class="d-none d-xl-block" />Or house renting, real estate news<br class="d-none d-xl-block" />Booking room.</p>
+              <div class="text-center text-md-start"> <a class="btn btn-primary btn-lg me-md-4 mb-3 mb-md-0 border-0 primary-btn-shadow" href="#viewnews" role="button">View news</a>
+                <div class="w-100 d-block d-md-none"></div><a href="#!" role="button" data-bs-toggle="modal" data-bs-target="#popupVideo"><span class="btn btn-success round-btn-lg rounded-circle me-3 danger-btn-shadow"> 
+                <i class="fas fa-paper-plane"></i>
+                </span></a><span class="fw-medium" style={{color: 'white'}}>Post News</span>
+                <div class="modal fade" id="popupVideo" tabindex="-1" aria-labelledby="popupVideo" aria-hidden="true">
+                </div>
               </div>
-            </div>
-            <div class="col-lg-5 order-1 order-lg-2 text-center text-lg-start">
-              <img
-                src="https://i.imgur.com/ClWV26P.jpeg"
-                class="img-fluid"
-                alt=""
-                data-aos="zoom-out"
-                data-aos-delay="300"
-              />
             </div>
           </div>
         </div>
       </section>
       {/* </section><!-- End Hero Section --> */}
+{/* 
+      <!-- ============================================--> */}
+
+      <section class="pt-1 pt-md-9" id="service">
+
+        <div class="container">
+          <div class="position-absolute z-index--1 end-0 d-none d-lg-block"></div>
+          <div class="mb-7 text-center">
+            <h5 class="text-secondary">LOCATION </h5>
+            <h3 class="fs-xl-10 fs-lg-8 fs-7 fw-bold font-cursive text-capitalize">Choose Location</h3>
+          </div>
+          <div class="row">
+            <div class="col-lg-3 col-sm-6 mb-6">
+              <div class="card service-card shadow-hover rounded-3 text-center align-items-center">
+                <div class="card-body p-xxl-5 p-4"> <img src="http://2.bp.blogspot.com/-BhNz0plAze4/VecqxSWuxyI/AAAAAAAADJM/9HROc8vSj4o/s400/vector-logohn-khuevancac.jpg" width="75" alt="Service" />
+                  <h4 class="mb-3">Hà Nội</h4>
+                  <p class="mb-0 fw-medium">Thành phố Hà Nội bao gồm cả ngoại thành và nội thành.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-sm-6 mb-6">
+              <div class="card service-card shadow-hover rounded-3 text-center align-items-center">
+                <div class="card-body p-xxl-5 p-4"> <img src="https://i.imgur.com/TW9KwPd.png" width="75" alt="Service" />
+                  <h4 class="mb-3">Hồ Chí Minh</h4>
+                  <p class="mb-0 fw-medium">Thành phố Hồ Chí Minh và các khu vực lân cận.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-sm-6 mb-6">
+              <div class="card service-card shadow-hover rounded-3 text-center align-items-center">
+                <div class="card-body p-xxl-5 p-4"> <img src="https://www.sos24h.vn/wwwroot/resources/upload/img/productcategory/8-2020/logo2.png" width="75" alt="Service" />
+                  <h4 class="mb-3">Đà Nẵng</h4>
+                  <p class="mb-0 fw-medium">Khu vực Thành Phố Đà Nẵng. Không bao gồm lân cận</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-sm-6 mb-6">
+              <div class="card service-card shadow-hover rounded-3 text-center align-items-center">
+                <div class="card-body p-xxl-5 p-4"> <img src="https://i.pinimg.com/originals/95/b2/2f/95b22f2e0059265d3d9cdb0cce0a4a27.png" width="115" alt="Service" />
+                  <h4 class="mb-3">Các Khu Vực Khác</h4>
+                  <p class="mb-0 fw-medium">Các tỉnh thành khác trên khu vực Việt Nam</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        </section>
+        {/* <!-- end of .container--> */}
+
+
 
       <div className="container">
-        <div className="input-group mb-3">
-          {/* ------------------------------------Search---------------------------------------- */}
-        </div>
-
-        {/* ------------------------------------Search---------------------------------------- */}
-
-        {/* ____________________________________DATA_________________________________________ */}
-        <div className="row mt-5">
-          <div class="section-header">
-            <h2>News</h2>
-            <p>
-              COMMON <span>NEWS</span>
-            </p>
+        <div class="mb-7 text-center" id='viewnews'>
+            <h5 class="text-secondary">TOP ROOM </h5>
+            <h3 class="fs-xl-10 fs-lg-8 fs-7 fw-bold font-cursive text-capitalize">Top Destination</h3>
           </div>
 
-          <div className="btn-group mt-3">
-            <button
-              className="btn btn-outline-primary dropdown-toggle"
-              type="button"
-              data-bs-toggle="dropdown"
-              data-bs-auto-close="true"
-              aria-expanded="false"
-            >
-              Choose type
-            </button>
-
-            <ul className="dropdown-menu">{categories_list}</ul>
-          </div>
+          <section class="pt-5" id="destination">
+          <div class="container">
+            <div className='row'>
           <UserPhoneData data={data} />
-        </div>
-
-        {/* ____________________________________DATA_________________________________________ */}
+          </div>
+          </div>
+          </section>
       </div>
     </>
   );
